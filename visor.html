@@ -912,7 +912,7 @@
     if (state.token) {
       headers["Authorization"] = "Bearer " + state.token;
     }
-    //const res = await fetch("https://api.github.com/" + endpoint, { headers });
+    const res = await fetch("https://api.github.com/" + endpoint, { headers });
     if (!res.ok) {
       if (res.status === 403) throw new Error("Límite de peticiones de GitHub alcanzado (Rate Limit). Configura un Token en 🔑 Token.");
       if (res.status === 404) throw new Error("Repositorio o recurso no encontrado en GitHub.");
