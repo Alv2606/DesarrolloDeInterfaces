@@ -1,6 +1,5 @@
 "use strict";
 //Tipos de datos:
-Object.defineProperty(exports, "__esModule", { value: true });
 //Para declarar que tipo tiene la variable con ":"
 let movie = "El Señor de los Anillos";
 let duration = 223;
