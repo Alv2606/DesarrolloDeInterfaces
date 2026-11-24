@@ -4,7 +4,8 @@
     // File Layout
     "rootDir": "./src",
     "outDir": "./public",
+    "module": "ESNext",
+    "types": ["jest"]
   },
   "include": ["src"],
-  "module": "ESNext"
 }

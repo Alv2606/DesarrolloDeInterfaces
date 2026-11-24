@@ -3,12 +3,12 @@
 //npm init
 //npm install webpack webpack-cli ts-loader typescript -D
 
+//Testing with jest
+//npm i jest babel-jest @babel/core @babel/preset-env @babel/preset-typescript @types/jest -D
+
 import { Movie } from "./classes/Movie";
 import { Director } from "./models/Director";
-import { IEpisodic } from "./models/IEpisodic";
-import { IVideo } from "./models/IVideo";
 import { HorrorMovie } from "./classes/HorrorMovie";
-import { Series } from "./classes/Series";
 
 const director1: Director<string> = {
     name: "Peter Jackson",
@@ -50,6 +50,15 @@ const addMovie = (movie: Movie) => {
     movieList.append(li);
 }
 
+let movieShown = false;
+
 btn.addEventListener("click", () => {
-    movieArr.forEach(movie => addMovie(movie));
+    if(movieShown){
+        movieList.innerHTML = "";
+        btn.textContent = "Show Movies";
+    } else {
+        movieArr.forEach(movie => addMovie(movie));
+        btn.textContent = "Hide Movies";
+    }
+    movieShown = !movieShown;
 })
