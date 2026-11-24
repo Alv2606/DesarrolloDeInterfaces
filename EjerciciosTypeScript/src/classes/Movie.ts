@@ -1,5 +1,5 @@
-import { Director } from "../models/Director";
-import { IVideo } from "../models/IVideo";
+import { Director } from "../models/Director.js";
+import { IVideo } from "../models/IVideo.js";
 
 export class Movie implements IVideo<string> {
     //Lo comentado es la forma antigua de hacerlo.

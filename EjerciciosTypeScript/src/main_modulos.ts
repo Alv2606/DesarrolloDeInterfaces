@@ -1,7 +1,9 @@
-import { Movie } from "./classes/Movie";
-import { Director } from "./models/Director";
-import { IEpisodic } from "./models/Episodic";
-import { IVideo } from "./models/IVideo";
+import { Movie } from "./classes/Movie.js";
+import { Director } from "./models/Director.js";
+import { IEpisodic } from "./models/IEpisodic.js";
+import { IVideo } from "./models/IVideo.js";
+import { HorrorMovie } from "./classes/HorrorMovie.js";
+import { Series } from "./classes/Series.js";
 
 const director1: Director<string> = {
     name: "Peter Jackson",
@@ -19,38 +21,7 @@ console.log(movie2);
 console.log(movie1.getInfo());
 movie1.play();
 
-class HorrorMovie extends Movie {
-    constructor(
-        title: string, 
-        duration: number, 
-        hasOscars: boolean,
-        director: Director<string>,
-        public hasJumpScares: boolean){
-            super(title, duration, hasOscars, director);
-    }
-
-    displayAlert(){
-        console.log("Que mieo")
-    }
-}
-
 const scream = new HorrorMovie("Scream", 120, true, director1, true);
 console.log(scream);
 scream.displayAlert();
 console.log(scream.getInfo());
-
-class Series implements IVideo<string>, IEpisodic{
-    constructor(
-        public title: string,
-        private duration: number,
-        readonly hasOscars: boolean,
-        public director: Director<string>,
-        public episodes: number){
-    }
-    getDuration(): number {
-        return this.duration;
-    }
-    play(): void {
-        console.log(`Playing ${this.title}`);
-    }
-}

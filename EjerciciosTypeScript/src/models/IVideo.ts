@@ -1,4 +1,4 @@
-import { Director } from "./Director";
+import { Director } from "./Director.js";
 
 export interface IVideo<T> {
     title: string;
