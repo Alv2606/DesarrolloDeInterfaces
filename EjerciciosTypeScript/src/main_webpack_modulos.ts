@@ -21,12 +21,16 @@ console.log(director1);
 const movie1 = new Movie("El señor de los anillos", 300, true, director1);
 const movie2 = new Movie("Harry Potter", 200, false, director1);
 
-console.log(movie1);
-console.log(movie2);
-console.log(movie1.getInfo());
-movie1.play();
-
 const scream = new HorrorMovie("Scream", 120, true, director1, true);
-console.log(scream);
-scream.displayAlert();
-console.log(scream.getInfo());
+
+const movieArr: Movie[] = [movie1, movie2, scream];
+
+const btn = document.querySelector(".btn") as HTMLButtonElement;
+const movieList = document.querySelector(".movie-list") as HTMLUListElement;
+
+const addMovie = (movie: Movie) => {
+    const li = document.createElement("li");
+    const h3 = document.createElement("h3");
+    const h4 = document.createElement("h4");
+    const p = document.createElement("p");
+}
