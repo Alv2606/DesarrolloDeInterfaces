@@ -3,12 +3,12 @@
 //npm init
 //npm install webpack webpack-cli ts-loader typescript -D
 
-import { Movie } from "./classes/Movie.js";
-import { Director } from "./models/Director.js";
-import { IEpisodic } from "./models/IEpisodic.js";
-import { IVideo } from "./models/IVideo.js";
-import { HorrorMovie } from "./classes/HorrorMovie.js";
-import { Series } from "./classes/Series.js";
+import { Movie } from "./classes/Movie";
+import { Director } from "./models/Director";
+import { IEpisodic } from "./models/IEpisodic";
+import { IVideo } from "./models/IVideo";
+import { HorrorMovie } from "./classes/HorrorMovie";
+import { Series } from "./classes/Series";
 
 const director1: Director<string> = {
     name: "Peter Jackson",

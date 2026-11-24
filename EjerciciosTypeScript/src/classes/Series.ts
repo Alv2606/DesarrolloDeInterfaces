@@ -1,6 +1,6 @@
-import { Director } from "../models/Director.js";
-import { IEpisodic } from "../models/IEpisodic.js";
-import { IVideo } from "../models/IVideo.js";
+import { Director } from "../models/Director";
+import { IEpisodic } from "../models/IEpisodic";
+import { IVideo } from "../models/IVideo";
 
 export class Series implements IVideo<string>, IEpisodic{
     constructor(

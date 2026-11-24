@@ -1,5 +1,5 @@
-import { Movie } from "../classes/Movie.js"
-import { Director } from "../models/Director.js";
+import { Movie } from "../classes/Movie"
+import { Director } from "../models/Director";
 
 export class HorrorMovie extends Movie {
     constructor(
