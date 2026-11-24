@@ -33,4 +33,23 @@ const addMovie = (movie: Movie) => {
     const h3 = document.createElement("h3");
     const h4 = document.createElement("h4");
     const p = document.createElement("p");
+
+    h3.classList.add("title");
+    h3.textContent = movie.title;
+
+    h4.classList.add("duration");
+    h4.textContent = `${movie.getDuration()} min`;
+
+    p.textContent = `Director: ${movie.director.name}`;
+
+    li.classList.add("movie-card");
+    li.append(h3);
+    li.append(h4);
+    li.append(p);
+
+    movieList.append(li);
 }
+
+btn.addEventListener("click", () => {
+    movieArr.forEach(movie => addMovie(movie));
+})
