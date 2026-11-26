@@ -1,0 +1,17 @@
+{
+  "name": "practica-jsdoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FuncionSumar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc . -d docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jsdoc": "^4.0.5"
+  }
+}
